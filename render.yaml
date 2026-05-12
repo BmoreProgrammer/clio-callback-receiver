@@ -1,0 +1,10 @@
+# render.yaml — Clio OAuth Callback Receiver
+# Deploy: render.com → New → Blueprint → Connect GitHub repo
+
+services:
+  - type: web
+    name: clio-callback
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn render_app:app
+    plan: free
