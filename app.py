@@ -63,3 +63,7 @@ PAGE = """<!DOCTYPE html>
 @app.route("/")
 def index():
     return PAGE
+
+@app.route("/callback")
+def callback():
+    return PAGE
