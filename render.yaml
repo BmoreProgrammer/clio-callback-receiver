@@ -5,6 +5,6 @@ services:
   - type: web
     name: clio-callback
     env: python
+    region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn render_app:app
-    plan: free
+    startCommand: gunicorn render_app:app --host 0.0.0.0 --port $PORT
